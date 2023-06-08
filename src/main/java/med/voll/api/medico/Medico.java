@@ -25,11 +25,11 @@ public class Medico {
     @Embedded
     private Direccion direccion;
 
-    public Medico(DatosRegistroMedico data) {
-        this.nombre = data.nombre();
-        this.email = data.email();
-        this.documento = data.documento();
-        this.especialidad = data.especialidad();
-        this.direccion = new Direccion(data.direccion());
+    public Medico(DatosRegistroMedico parametros) {
+        this.nombre = parametros.nombre();
+        this.email = parametros.email();
+        this.documento = parametros.documento();
+        this.especialidad = parametros.especialidad();
+        this.direccion = new Direccion(parametros.direccion());
     }
 }
